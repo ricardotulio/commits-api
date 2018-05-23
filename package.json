@@ -1,7 +1,7 @@
 {
   "name": "codacy-test",
   "version": "0.1.0",
-  "description": "Commit Fiewer for GitHub projects",
+  "description": "Commit Viewer for GitHub projects",
   "main": "index.js",
   "repository": "https://bitbucket.org/tulioricardo/codacy-test/src",
   "author": "Ricardo Ledo de Tulio <ledo.tulio@gmail.com>",
