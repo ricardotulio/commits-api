@@ -7,7 +7,7 @@ describe('build translation error', () => {
 
     const translation = {
       message: 'error 42',
-      translation: 'The life, the universe and everything'
+      translation: 'The life, the universe and everything',
     }
 
     const expectedTranslatedError = new Error(prop('translation', translation))
