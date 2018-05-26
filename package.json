@@ -23,5 +23,9 @@
     "build": "babel src --out-dir build",
     "linter": "eslint src/ tests/",
     "test": "jest"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "ramda": "^0.25.0"
   }
 }
