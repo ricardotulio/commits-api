@@ -17,12 +17,14 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jest": "^21.15.2",
-    "jest": "^22.4.4"
+    "jest": "^22.4.4",
+    "nodemon": "^1.17.5"
   },
   "scripts": {
     "build": "babel src --out-dir build",
     "linter": "eslint src/ tests/",
-    "test": "jest"
+    "test": "jest",
+    "start": "nodemon ./src/main.js --exec babel-node"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
