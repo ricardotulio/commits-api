@@ -47,7 +47,7 @@ const expectAfterFormat = [
     author: {
       name: 'Ricardo Tulio',
       email: 'ledo.tulio@gmail.com',
-    }
+    },
   },
   {
     hash: '61f0db42414988e56df0803c37fb7a0bfa3336c8',
@@ -56,7 +56,7 @@ const expectAfterFormat = [
     author: {
       name: 'Ricardo Tulio',
       email: 'ledo.tulio@gmail.com',
-    }
+    },
   },
   {
     hash: 'a52eccba25fbc5dbe31c7d2a65ddb2368fe040aa',
@@ -65,7 +65,7 @@ const expectAfterFormat = [
     author: {
       name: 'Ricardo Tulio',
       email: 'ledo.tulio@gmail.com',
-    }
+    },
   },
   {
     hash: 'e248c1c8fa52695c99174f53950e4fa9a79ec3e6',
@@ -74,7 +74,7 @@ const expectAfterFormat = [
     author: {
       name: 'Ricardo Tulio',
       email: 'ledo.tulio@gmail.com',
-    }
+    },
   },
 ]
 

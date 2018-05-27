@@ -5,10 +5,10 @@ describe('execute git fetch and pull', () => {
     expect.assertions(4)
 
     const fetch = jest.fn()
-    fetch.mockReturnValue(Promise.resolve())  
-  
+    fetch.mockReturnValue(Promise.resolve())
+
     const pull = jest.fn()
-    fetch.mockReturnValue(Promise.resolve())  
+    fetch.mockReturnValue(Promise.resolve())
 
     const git = {
       fetch,
@@ -17,7 +17,7 @@ describe('execute git fetch and pull', () => {
 
     const branch = 'master'
 
-    return fetchAndPull(branch, git).then((result) => {
+    return fetchAndPull(branch, git).then(() => {
       expect(fetch.mock.calls.length).toBe(1)
       expect(pull.mock.calls.length).toBe(1)
       expect(pull.mock.calls[0][0]).toBe('origin')

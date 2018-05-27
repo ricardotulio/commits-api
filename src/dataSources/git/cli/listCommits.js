@@ -9,7 +9,7 @@ const createDirectoryIfDoesntExists = buildCreateDirectoryIfDoesntExists()
 
 const initializeRepositoryIfNotInitialized = buildInitializeRepositoryIfNotInitialized()
 
-const repositoriesPath = '/tmp/repositories/';
+const repositoriesPath = '/tmp/repositories/'
 
 const listCommits = (repositoryUrl, branch = 'master') =>
   Promise.resolve(repositoryUrl)
