@@ -1,0 +1,11 @@
+image: node:10.1.0
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script: # Modify the commands below to build your repository.
+          - npm install -g yarn
+          - yarn install
+          - yarn test
