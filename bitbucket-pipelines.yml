@@ -7,5 +7,6 @@ pipelines:
           - node
         script: # Modify the commands below to build your repository.
           - npm install -g yarn
+          - chmod +x /usr/local/bin/yarn
           - yarn install
           - yarn test
