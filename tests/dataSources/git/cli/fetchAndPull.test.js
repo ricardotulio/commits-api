@@ -17,7 +17,7 @@ describe('execute git fetch and pull', () => {
 
     const branch = 'master'
 
-    return fetchAndPull(git, branch).then((result) => {
+    return fetchAndPull(branch, git).then((result) => {
       expect(fetch.mock.calls.length).toBe(1)
       expect(pull.mock.calls.length).toBe(1)
       expect(pull.mock.calls[0][0]).toBe('origin')

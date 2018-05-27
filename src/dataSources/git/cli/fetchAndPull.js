@@ -1,6 +1,6 @@
 import { curry } from 'ramda'
 
-const fetchAndPull = curry((git, branch) => git.fetch()
+const fetchAndPull = curry((branch, git) => git.fetch()
   .then(() => git.pull('origin', branch))
   .then(() => git))
 

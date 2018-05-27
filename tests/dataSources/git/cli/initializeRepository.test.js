@@ -24,7 +24,7 @@ describe('initialize repository', () => {
 
     const repositoryUrl = 'https://github.com/ricardotulio/skynet'
 
-    return initializeRepository(git, repositoryUrl)
+    return initializeRepository(repositoryUrl, git)
       .then((result) => {
         expect(result).toBe(git)
         expect(git.init.mock.calls.length).toBe(1)

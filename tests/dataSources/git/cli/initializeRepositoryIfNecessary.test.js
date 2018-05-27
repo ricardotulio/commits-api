@@ -16,11 +16,11 @@ describe('initialize repository if necessary', () => {
 
     const repositoryUrl = 'https://github.com/git/git'
 
-    return initializeRepositoryIfNecessary(initializeRepository, git, repositoryUrl)
+    return initializeRepositoryIfNecessary(initializeRepository, repositoryUrl, git)
       .then((result) => {
         expect(initializeRepository.mock.calls.length).toBe(1)
-        expect(initializeRepository.mock.calls[0][0]).toBe(git)
-        expect(initializeRepository.mock.calls[0][1]).toBe(repositoryUrl)
+        expect(initializeRepository.mock.calls[0][0]).toBe(repositoryUrl)
+        expect(initializeRepository.mock.calls[0][1]).toBe(git)
       })
   })
 })

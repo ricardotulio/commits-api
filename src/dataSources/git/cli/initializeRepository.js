@@ -3,7 +3,7 @@ import {
   curry,
 } from 'ramda'
 
-const initializeRepository = curry((git, repositoryUrl) => git.init()
+const initializeRepository = curry((repositoryUrl, git) => git.init()
     .then(() => git.addRemote('origin', repositoryUrl))
     .then(always(git))
 )
