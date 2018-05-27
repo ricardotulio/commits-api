@@ -1,5 +1,5 @@
 import Promise from 'bluebird'
-import initializeRepositoryIfNecessary from '../../../../src/dataSources/git/cli/initializeRepositoryIfNecessary'
+import initializeRepositoryIfNotInitialized from '../../../../src/dataSources/git/cli/initializeRepositoryIfNotInitialized'
 
 describe('initialize repository if necessary', () => {
   test('must initialize repository if necessary', () => {
@@ -16,7 +16,7 @@ describe('initialize repository if necessary', () => {
 
     const repositoryUrl = 'https://github.com/git/git'
 
-    return initializeRepositoryIfNecessary(initializeRepository, repositoryUrl, git)
+    return initializeRepositoryIfNotInitialized(initializeRepository, repositoryUrl, git)
       .then((result) => {
         expect(initializeRepository.mock.calls.length).toBe(1)
         expect(initializeRepository.mock.calls[0][0]).toBe(repositoryUrl)
