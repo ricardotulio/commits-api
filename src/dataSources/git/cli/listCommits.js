@@ -1,7 +1,9 @@
+import Promise from 'bluebird'
 import buildGitObject from 'simple-git/promise'
 import buildCreateDirectoryIfDoesntExists from './buildCreateDirectoryIfDoesntExists'
 import buildInitializeRepositoryIfNotInitialized from './buildInitializeRepositoryIfNotInitialized'
 import fetchAndPull from './fetchAndPull'
+import checkoutTo from './checkoutTo'
 import getPathToRepository from './getPathToRepository'
 import formatGitLog from './formatGitLog'
 
@@ -18,6 +20,7 @@ const listCommits = (repositoryUrl, branch = 'master') =>
     .then(buildGitObject)
     .then(initializeRepositoryIfNotInitialized(repositoryUrl))
     .then(fetchAndPull(branch))
+    .then(checkoutTo(branch))
     .then(git => git.log())
     .then(formatGitLog)
 
