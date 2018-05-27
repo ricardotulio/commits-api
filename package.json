@@ -26,6 +26,8 @@
   },
   "dependencies": {
     "bluebird": "^3.5.1",
-    "ramda": "^0.25.0"
+    "mkdirp-promise": "^5.0.1",
+    "ramda": "^0.25.0",
+    "simple-git": "^1.95.0"
   }
 }
