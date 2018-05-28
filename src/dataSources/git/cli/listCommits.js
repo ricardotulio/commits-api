@@ -12,13 +12,11 @@ const maybeCreatePath = buildMaybeCreatePath()
 
 const maybeInitRepository = buildMaybeInitRepository()
 
-const repositoriesPath = '/tmp/repositories/'
-
 const listCommits = (params) => {
   const { repository, branch, pagination } = params
 
   return Promise.resolve(repository)
-    .then(getPathToRepository(repositoriesPath))
+    .then(getPathToRepository)
     .then(maybeCreatePath)
     .then(buildGitRepository)
     .then(maybeInitRepository(repository))
