@@ -5,6 +5,7 @@ import buildInitializeRepositoryIfNotInitialized from './buildInitializeReposito
 import fetchAndPull from './fetchAndPull'
 import checkoutTo from './checkoutTo'
 import getPathToRepository from './getPathToRepository'
+import getPaginatedLog from './getPaginatedLog'
 import formatGitLog from './formatGitLog'
 
 const createDirectoryIfDoesntExists = buildCreateDirectoryIfDoesntExists()
@@ -13,7 +14,7 @@ const initializeRepositoryIfNotInitialized = buildInitializeRepositoryIfNotIniti
 
 const repositoriesPath = '/tmp/repositories/'
 
-const listCommits = (repositoryUrl, branch = 'master') =>
+const listCommits = (repositoryUrl, branch = 'master', pagination) =>
   Promise.resolve(repositoryUrl)
     .then(getPathToRepository(repositoriesPath))
     .then(createDirectoryIfDoesntExists)
@@ -21,7 +22,7 @@ const listCommits = (repositoryUrl, branch = 'master') =>
     .then(initializeRepositoryIfNotInitialized(repositoryUrl))
     .then(fetchAndPull(branch))
     .then(checkoutTo(branch))
-    .then(git => git.log())
+    .then(getPaginatedLog(pagination))
     .then(formatGitLog)
 
 export default listCommits
