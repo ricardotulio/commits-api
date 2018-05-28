@@ -1,5 +1,5 @@
 import Promise from 'bluebird'
-import initRepository from '../../../../src/dataSources/git/cli/initRepository'
+import initRepository from '../../../../src/dataSources/github/cli/initRepository'
 
 const buildGitRepositoryMock = () => {
   const initMock = jest.fn()

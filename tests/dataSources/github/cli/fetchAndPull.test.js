@@ -1,4 +1,4 @@
-import fetchAndPull from '../../../../src/dataSources/git/cli/fetchAndPull'
+import fetchAndPull from '../../../../src/dataSources/github/cli/fetchAndPull'
 
 const buildGitRepositoryMock = () => {
   const fetchMock = jest.fn()

@@ -1,4 +1,4 @@
-import getBranchHash from '../../../../src/dataSources/git/api/getBranchHash'
+import getBranchHash from '../../../../src/dataSources/github/api/getBranchHash'
 
 const hash = 'b5730eef41999d0d1a87d220d28263f891bc5665'
 

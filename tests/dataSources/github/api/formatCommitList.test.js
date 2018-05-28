@@ -1,4 +1,4 @@
-import formatCommitList from '../../../../src/dataSources/git/api/formatCommitList'
+import formatCommitList from '../../../../src/dataSources/github/api/formatCommitList'
 import {
   githubApiOutput,
   expectAfterFormat,
