@@ -21,10 +21,10 @@ describe('initialize repository', () => {
     expect.assertions(5)
 
     const gitRepo = buildGitRepositoryMock()
+    const repository = 'ricardotulio/skynet'
+    const repositoryUrl = `https://github.com/${repository}`
 
-    const repositoryUrl = 'https://github.com/ricardotulio/skynet'
-
-    return initRepository(repositoryUrl, gitRepo)
+    return initRepository(repository, gitRepo)
       .then((result) => {
         expect(result).toBe(gitRepo)
         expect(gitRepo.init.mock.calls.length).toBe(1)
