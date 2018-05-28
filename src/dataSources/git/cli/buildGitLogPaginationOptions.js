@@ -8,7 +8,7 @@ import {
 } from 'ramda'
 
 const buildGitLogPaginationOptions = pagination => {
-  const limit = propOr(30, 'limit')
+  const limit = propOr('100', 'limit')
 
   const offset = pipe(
     propOr(1, 'page'),
