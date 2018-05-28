@@ -1,5 +1,5 @@
 import Promise from 'bluebird'
-import initializeRepositoryIfNotInitialized from '../../../../src/dataSources/git/cli/initializeRepositoryIfNotInitialized'
+import maybeInitRepository from '../../../../src/dataSources/git/cli/maybeInitRepository'
 
 const buildGitRepositoryMock = () => {
   const checkIsRepoMock = jest.fn()
@@ -16,17 +16,17 @@ describe('initialize repository if necessary', () => {
   test('must initialize repository if necessary', () => {
     expect.assertions(3)
 
-    const initializeRepository = jest.fn()
+    const initRepository = jest.fn()
 
     const gitRepositoryMock = buildGitRepositoryMock()
 
     const repositoryUrl = 'https://github.com/git/git'
 
-    return initializeRepositoryIfNotInitialized(initializeRepository, repositoryUrl, gitRepositoryMock)
+    return maybeInitRepository(initRepository, repositoryUrl, gitRepositoryMock)
       .then(() => {
-        expect(initializeRepository.mock.calls.length).toBe(1)
-        expect(initializeRepository.mock.calls[0][0]).toBe(repositoryUrl)
-        expect(initializeRepository.mock.calls[0][1]).toBe(gitRepositoryMock)
+        expect(initRepository.mock.calls.length).toBe(1)
+        expect(initRepository.mock.calls[0][0]).toBe(repositoryUrl)
+        expect(initRepository.mock.calls[0][1]).toBe(gitRepositoryMock)
       })
   })
 })
