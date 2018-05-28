@@ -15,13 +15,13 @@ const maybeInitRepository = buildMaybeInitRepository()
 const repositoriesPath = '/tmp/repositories/'
 
 const listCommits = (params) => {
-  const { repositoryUrl, branch, pagination } = params
+  const { repository, branch, pagination } = params
 
-  return Promise.resolve(repositoryUrl)
+  return Promise.resolve(repository)
     .then(getPathToRepository(repositoriesPath))
     .then(maybeCreatePath)
     .then(buildGitRepository)
-    .then(maybeInitRepository(repositoryUrl))
+    .then(maybeInitRepository(repository))
     .then(fetchAndPull(branch))
     .then(checkoutTo(branch))
     .then(getPaginatedLog(pagination))
