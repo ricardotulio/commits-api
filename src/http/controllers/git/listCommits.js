@@ -7,12 +7,12 @@ import {
 import { listCommits as listCommitsFromCLI } from '../../../dataSources/git/cli'
 
 const listCommits = (req, res) => {
-  const repository = concat('https://github.com/', req.params[0])
+  const repositoryUrl = concat('https://github.com/', req.params[0])
   const branch = req.params[1]
 
   const pagination = pick(['page', 'limit'], req.query)
 
-  listCommitsFromCLI(repository, branch, pagination)
+  listCommitsFromCLI({ repositoryUrl, branch, pagination })
     .then(result => res.send(result))
 }
 
