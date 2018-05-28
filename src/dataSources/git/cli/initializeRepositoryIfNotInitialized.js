@@ -1,13 +1,13 @@
 import { curry } from 'ramda'
 
 const initializeRepositoryIfNotInitialized =
-  curry((initializeRepository, repositoryUrl, git) =>
-    git.checkIsRepo()
+  curry((initializeRepository, repositoryUrl, gitRepository) =>
+    gitRepository.checkIsRepo()
       .then((isRepo) => {
         if (isRepo) {
-          return git
+          return gitRepository
         }
-        return initializeRepository(repositoryUrl, git)
+        return initializeRepository(repositoryUrl, gitRepository)
       }))
 
 export default initializeRepositoryIfNotInitialized
