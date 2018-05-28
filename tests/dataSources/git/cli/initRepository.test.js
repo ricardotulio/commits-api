@@ -1,5 +1,5 @@
 import Promise from 'bluebird'
-import initializeRepository from '../../../../src/dataSources/git/cli/initializeRepository'
+import initRepository from '../../../../src/dataSources/git/cli/initRepository'
 
 const buildGitRepositoryMock = () => {
   const initMock = jest.fn()
@@ -24,7 +24,7 @@ describe('initialize repository', () => {
 
     const repositoryUrl = 'https://github.com/ricardotulio/skynet'
 
-    return initializeRepository(repositoryUrl, gitRepo)
+    return initRepository(repositoryUrl, gitRepo)
       .then((result) => {
         expect(result).toBe(gitRepo)
         expect(gitRepo.init.mock.calls.length).toBe(1)

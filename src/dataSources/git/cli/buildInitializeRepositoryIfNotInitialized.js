@@ -1,7 +1,7 @@
-import initializeRepository from './initializeRepository'
+import initRepository from './initRepository'
 import initializeRepositoryIfNotInitialized from './initializeRepositoryIfNotInitialized'
 
 const buildInitializeRepositoryIfNotInitialized = () =>
-  initializeRepositoryIfNotInitialized(initializeRepository)
+  initializeRepositoryIfNotInitialized(initRepository)
 
 export default buildInitializeRepositoryIfNotInitialized
