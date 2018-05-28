@@ -1,4 +1,4 @@
-import createDirectoryIfDoesntExists from '../../../../src/dataSources/git/cli/createDirectoryIfDoesntExists'
+import maybeCreatePath from '../../../../src/dataSources/git/cli/maybeCreatePath'
 
 describe('create directory if it not exists', () => {
   test('must create directory if not exists', () => {
@@ -10,7 +10,7 @@ describe('create directory if it not exists', () => {
     const createDirectory = jest.fn()
     createDirectory.mockReturnValue(Promise.resolve(path))
 
-    return createDirectoryIfDoesntExists(directoryExists, createDirectory, path)
+    return maybeCreatePath(directoryExists, createDirectory, path)
       .then((result) => {
         expect(result).toBe(path)
         expect(createDirectory.mock.calls.length).toBe(1)
@@ -25,7 +25,7 @@ describe('create directory if it not exists', () => {
     const directoryExists = () => true
     const createDirectory = jest.fn()
 
-    return createDirectoryIfDoesntExists(directoryExists, createDirectory, path)
+    return maybeCreatePath(directoryExists, createDirectory, path)
       .then((result) => {
         expect(result).toBe(path)
         expect(createDirectory.mock.calls.length).toBe(0)
