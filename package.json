@@ -27,6 +27,7 @@
     "start": "nodemon ./src/main.js --exec babel-node"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bluebird": "^3.5.1",
     "express": "^4.16.3",
     "mkdirp-promise": "^5.0.1",
