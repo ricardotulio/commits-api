@@ -1,8 +1,8 @@
 import express from 'express'
-import { listCommits } from './http/controllers/git'
+import commits from './http/controllers/github/commits'
 
 const app = express()
 
-app.get('/v1/github/*/branch/*', listCommits)
+app.get('/v1/github/:repository(*)/branch/:branch(*)', commits.get)
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
