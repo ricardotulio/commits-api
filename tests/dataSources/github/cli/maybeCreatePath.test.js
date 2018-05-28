@@ -1,4 +1,4 @@
-import maybeCreatePath from '../../../../src/dataSources/git/cli/maybeCreatePath'
+import maybeCreatePath from '../../../../src/dataSources/github/cli/maybeCreatePath'
 
 describe('create directory if it not exists', () => {
   test('must create directory if not exists', () => {

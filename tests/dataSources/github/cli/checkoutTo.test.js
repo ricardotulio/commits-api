@@ -1,4 +1,4 @@
-import checkoutTo from '../../../../src/dataSources/git/cli/checkoutTo'
+import checkoutTo from '../../../../src/dataSources/github/cli/checkoutTo'
 
 const buildGitRepositoryMock = () => {
   const checkoutMock = jest.fn()

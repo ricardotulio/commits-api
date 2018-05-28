@@ -1,5 +1,5 @@
 import Promise from 'bluebird'
-import maybeInitRepository from '../../../../src/dataSources/git/cli/maybeInitRepository'
+import maybeInitRepository from '../../../../src/dataSources/github/cli/maybeInitRepository'
 
 const buildGitRepositoryMock = () => {
   const checkIsRepoMock = jest.fn()

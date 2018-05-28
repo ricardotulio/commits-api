@@ -1,4 +1,4 @@
-import formatGitLog from '../../../../src/dataSources/git/cli/formatGitLog'
+import formatGitLog from '../../../../src/dataSources/github/cli/formatGitLog'
 import {
   gitLogOutput,
   expectAfterFormat,

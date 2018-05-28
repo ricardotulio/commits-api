@@ -1,5 +1,5 @@
 import { concat } from 'ramda'
-import { listCommits } from '../../../dataSources/git'
+import { listCommits } from '../../../dataSources/github'
 
 const get = (req, res) => {
   const { repository, branch } = req.params

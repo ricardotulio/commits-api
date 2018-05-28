@@ -1,4 +1,4 @@
-import findBranchByName from '../../../../src/dataSources/git/api/findBranchByName'
+import findBranchByName from '../../../../src/dataSources/github/api/findBranchByName'
 
 describe('find a branch by name in branch list', () => {
   test('must find a branch in branch list', () => {
