@@ -1,6 +1,4 @@
-import {
-  path,
-} from 'ramda'
+import { path } from 'ramda'
 
 const getBranchHash = path(['commit', 'sha'])
 

@@ -7,7 +7,7 @@ import {
   toString,
 } from 'ramda'
 
-const buildGitLogPaginationOptions = pagination => {
+const buildGitLogPaginationOptions = (pagination) => {
   const limit = propOr('100', 'limit')
 
   const offset = pipe(

@@ -5,7 +5,7 @@ const hash = 'b5730eef41999d0d1a87d220d28263f891bc5665'
 const branchMock = {
   commit: {
     sha: hash,
-  }
+  },
 }
 
 describe('get branch hash from branch objet', () => {

@@ -1,7 +1,7 @@
 import buildGitLogPaginationOptions from '../../../../src/dataSources/github/cli/buildGitLogPaginationOptions'
 
 describe('build git log pagionation options', () => {
-  test('must build an array with options to paginate result', () =>{
+  test('must build an array with options to paginate result', () => {
     const limit = '10'
     const page = '2'
 
