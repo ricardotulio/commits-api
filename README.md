@@ -1,5 +1,5 @@
-# Codacy Test
-Implementation of Codacy test.
+# Commits API
+API to retrieve a commit list from GitHub using git cli as fallback.
 
 ## Description
 This project is an API that retrieve list of commits from repositories. It API have two data sources: repositories cloned by command line and GitHub API.
