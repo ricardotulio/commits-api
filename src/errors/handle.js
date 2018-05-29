@@ -2,9 +2,8 @@ import {
   curry,
   ifElse,
 } from 'ramda'
-import app from '../../config/app'
 
-const handle = curry((res, error) => {
+const handle = curry((isDebug, res, error) => {
   res.statusCode = 501
 
   const showError = error => res.send({
@@ -13,7 +12,6 @@ const handle = curry((res, error) => {
   })
 
   const showGenericMessage = () => res.send({ error: 'Ops! an error ocurred' })
-  const isDebug = () => app.debug
 
   const handle = ifElse(
     isDebug,
@@ -21,7 +19,7 @@ const handle = curry((res, error) => {
     showGenericMessage,
   )
 
-  handle(error)
+  return handle(error)
 })
 
 export default handle

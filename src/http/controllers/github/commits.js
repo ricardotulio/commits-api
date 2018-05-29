@@ -1,6 +1,8 @@
 import { listCommits } from '../../../dataSources/github'
 import http from '../../../../config/http'
-import handleError from '../../../errors/handle'
+import buildHandleError from '../../../errors/buildHandle'
+
+const handleError = buildHandleError()
 
 const get = (req, res) => {
   const { repository, branch } = req.params
