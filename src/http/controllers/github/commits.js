@@ -1,5 +1,7 @@
 import { concat } from 'ramda'
 import { listCommits } from '../../../dataSources/github'
+import http from '../../../../config/http'
+import handleError from '../../../errors/handle'
 
 const get = (req, res) => {
   const { repository, branch } = req.params
@@ -10,7 +12,9 @@ const get = (req, res) => {
   }
 
   listCommits({ repository, branch, pagination })
-    .then(result => res.send(result))
+    .timeout(http.timeout)
+    .then((result) => res.send(result))
+    .catch(handleError(res))
 }
 
 export default {
