@@ -29,6 +29,23 @@ $ yarn install
 $ yarn build
 ```
 
+### Configure
+The configurations files are in `config`. In this repository, you can see three files:
+- app
+- http
+- paths
+
+#### config/app.js
+Here you can set application debug mode.
+
+#### config/http
+Here you can set default timeout to http request.
+
+#### config/http
+Here you can set path where GitHub repositories will be cloned.
+
+*ATTENTION: This path must be set and have permission to read an write.*
+
 ### Running
 Run project:
 ```
