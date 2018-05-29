@@ -19,8 +19,8 @@ describe('handle errors', () => {
     const genericMessage = 'Ops! an error ocurred'
     const error = new Error('Dont Panic!')
 
-    return handle(isDebug, resMock, error).then((error) => {
-      expect(error.error).toBe(genericMessage)
+    return handle(isDebug, resMock, error).then((result) => {
+      expect(result.error).toBe(genericMessage)
     })
   })
 
@@ -34,8 +34,8 @@ describe('handle errors', () => {
     const errorMessage = 'Dont Panic!'
     const error = new Error(errorMessage)
 
-    return handle(isDebug, resMock, error).then((error) => {
-      expect(error.error).toBe(errorMessage)
+    return handle(isDebug, resMock, error).then((result) => {
+      expect(result.error).toBe(errorMessage)
     })
   })
 })

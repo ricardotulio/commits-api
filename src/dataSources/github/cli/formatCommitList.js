@@ -14,7 +14,7 @@ const formatCommit = applySpec({
   },
 })
 
-const formatCommitList = (gitLogOutput) =>
+const formatCommitList = gitLogOutput =>
   map(formatCommit, prop('all', gitLogOutput))
 
 export default formatCommitList

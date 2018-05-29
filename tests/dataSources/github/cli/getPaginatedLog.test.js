@@ -10,7 +10,7 @@ const buildGitRepositoryMock = () => {
 }
 
 describe('retrieve a paginated log form cli', () => {
-  test('must invoke log function with correctly params', () => { 
+  test('must invoke log function with correctly params', () => {
     expect.assertions(2)
 
     const gitRepositoryMock = buildGitRepositoryMock()

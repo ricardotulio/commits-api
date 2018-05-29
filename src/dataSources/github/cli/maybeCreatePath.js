@@ -8,7 +8,7 @@ const maybeCreatePath = curry((directoryExists, createDirectory, path) => {
   const maybe = ifElse(
     directoryExists,
     Promise.resolve,
-    (path) => createDirectory(path),
+    createDirectory,
   )
 
   return maybe(path)
