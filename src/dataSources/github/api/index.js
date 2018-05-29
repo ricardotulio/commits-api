@@ -1,5 +1,3 @@
 import listCommits from './listCommits'
 
-export {
-  listCommits,
-}
+export { listCommits }

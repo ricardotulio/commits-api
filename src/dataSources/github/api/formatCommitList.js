@@ -14,10 +14,10 @@ const formatCommitListItem = applySpec({
   author: pipe(
     path(['commit', 'author']),
     pick(['name', 'email']),
-  )
+  ),
 })
 
-const formatCommitList = (commitList) =>
+const formatCommitList = commitList =>
   map(formatCommitListItem, commitList)
 
 export default formatCommitList
