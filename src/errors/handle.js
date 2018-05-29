@@ -3,23 +3,24 @@ import {
   ifElse,
 } from 'ramda'
 
+const showError = curry((res, error) => res.send({
+  error: error.message,
+  description: error.description,
+}))
+
+const showGenericMessage = res => () =>
+  res.send({ error: 'Ops! an error ocurred' })
+
 const handle = curry((isDebug, res, error) => {
   res.statusCode = 501
 
-  const showError = error => res.send({
-    error: error.message,
-    description: error.description,
-  })
-
-  const showGenericMessage = () => res.send({ error: 'Ops! an error ocurred' })
-
-  const handle = ifElse(
+  const maybeHandle = ifElse(
     isDebug,
-    showError,
-    showGenericMessage,
+    showError(res),
+    showGenericMessage(res),
   )
 
-  return handle(error)
+  return maybeHandle(error)
 })
 
 export default handle
