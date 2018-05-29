@@ -6,9 +6,10 @@ import handleError from '../../../errors/handle'
 const get = (req, res) => {
   const { repository, branch } = req.params
 
-  const { page } = req.query
+  const { page, limit } = req.query
   const pagination = {
     page,
+    limit,
   }
 
   listCommits({ repository, branch, pagination })
