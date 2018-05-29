@@ -1,5 +1,8 @@
 import axios from 'axios'
-import { curry } from 'ramda'
+import {
+  curry,
+  propOr,
+} from 'ramda'
 
 const listCommitsByBranchHash = curry((repository, pagination, hash) => {
   const page = propOr('1', 'page', pagination)

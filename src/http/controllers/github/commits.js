@@ -6,7 +6,7 @@ import handleError from '../../../errors/handle'
 const get = (req, res) => {
   const { repository, branch } = req.params
 
-  const { page, limit } = req.query
+  const { page = '1', limit = '100' } = req.query
   const pagination = {
     page,
     limit,
