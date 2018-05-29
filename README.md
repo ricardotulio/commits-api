@@ -74,7 +74,7 @@ $ yarn linter
 
 ### Commits
 #### Listing commits
-URL: `/v1/github/:user/:repository/branch/:branch?page=:page`
+URL: `/v1/github/:user/:repository/branch/:branch/commit?page=:page`
 
 | Parameter      | Description                           | Examples  | Default |
 | -------------- |---------------------------------------| ----------|---------|
@@ -86,7 +86,7 @@ URL: `/v1/github/:user/:repository/branch/:branch?page=:page`
 Example:
 
 ```js
-GET /v1/github/ricardotulio/skynet/branch/feature/docker-compose
+GET /v1/github/ricardotulio/skynet/branch/feature/docker-compose/commit
 
 HTTP/1.1 200 OK
 [
