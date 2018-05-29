@@ -1,4 +1,3 @@
-import Promise from 'bluebird'
 import buildGitRepository from 'simple-git/promise'
 import buildMaybeCreatePath from './buildMaybeCreatePath'
 import buildMaybeInitRepository from './buildMaybeInitRepository'

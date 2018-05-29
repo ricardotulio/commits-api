@@ -1,4 +1,3 @@
-import Promise from 'bluebird'
 import listBranches from './listBranches'
 import findBranchByName from './findBranchByName'
 import getBranchHash from './getBranchHash'

@@ -9,7 +9,6 @@ import {
   propEq,
   __,
 } from 'ramda'
-import Promise from 'bluebird'
 
 const byMessage = propEq('message')
 
