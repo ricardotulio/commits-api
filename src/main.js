@@ -1,5 +1,8 @@
 import express from 'express'
+import Promise from 'bluebird'
 import commits from './http/controllers/github/commits'
+
+global.Promise = Promise
 
 const app = express()
 
