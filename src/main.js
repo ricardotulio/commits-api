@@ -8,4 +8,4 @@ const app = express()
 
 app.get('/v1/github/:repository(*)/branch/:branch(*)/commit', commits.get)
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(3000, () => console.log('Codacy test listening on port 3000!'))
