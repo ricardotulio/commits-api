@@ -5,7 +5,7 @@ import fetchAndPull from './fetchAndPull'
 import checkoutTo from './checkoutTo'
 import getPathToRepository from './getPathToRepository'
 import getPaginatedLog from './getPaginatedLog'
-import formatGitLog from './formatGitLog'
+import formatCommitList from './formatCommitList'
 
 const maybeCreatePath = buildMaybeCreatePath()
 
@@ -22,7 +22,7 @@ const listCommits = (params) => {
     .then(fetchAndPull(branch))
     .then(checkoutTo(branch))
     .then(getPaginatedLog(pagination))
-    .then(formatGitLog)
+    .then(formatCommitList)
 }
 
 export default listCommits
