@@ -1,5 +1,5 @@
 # Codacy Test
-Implementation of codacy test.
+Implementation of Codacy test.
 
 ## Description
 This project is an API that retrieve list of commits from repositories. It API have two data sources: repositories cloned by command line and GitHub API.
