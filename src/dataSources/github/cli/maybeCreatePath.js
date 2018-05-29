@@ -1,3 +1,4 @@
+import Promise from 'bluebird'
 import {
   curry,
   ifElse,
@@ -7,7 +8,7 @@ const maybeCreatePath = curry((directoryExists, createDirectory, path) => {
   const maybe = ifElse(
     directoryExists,
     Promise.resolve,
-    path => createDirectory(path),
+    (path) => createDirectory(path),
   )
 
   return maybe(path)
