@@ -11,7 +11,7 @@ const listCommits = (params) => {
     .then(listBranches)
     .then(findBranchByName(branch))
     .then(getBranchHash)
-    .then(listCommitsByBranchHash(repository))
+    .then(listCommitsByBranchHash(repository, pagination))
     .then(formatCommitList)
 }
 
